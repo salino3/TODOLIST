@@ -12,11 +12,9 @@ export class TareasComponent implements OnInit {
   // tipo any porque viene de un recurso externo
   tareas: any;
 
-  constructor(private webservice: WebService) {}
+  constructor(public webservice: WebService) {}
 
-  async ngOnInit() {
-    let respuesta = await this.webservice.getTask();
-    console.log(respuesta);
-    this.tareas = respuesta;
+   ngOnInit() {
+
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WebService } from '../web.service';
 
 @Component({
@@ -8,14 +8,12 @@ import { WebService } from '../web.service';
 })
 export class NuevaTareaComponent implements OnInit {
 
-@Output() nuevaTarea = new EventEmitter();
 
   constructor(private webservice: WebService) {}
 
   tarea = { trabajo: '', usuario: '' };
 post(){
   this.webservice.postTask(this.tarea);
-  this.nuevaTarea.emit(this.tarea);
 }
   ngOnInit(): void {}
 }

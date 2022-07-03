@@ -14,7 +14,7 @@ var corsOpt = {
   optionsSuccesStatus: 200
 }
 
-var tareas = [
+var tareas = [ 
   { trabajo: "primera tarea", usuario: "David  Gonzales" },
   { trabajo: "segunda tarea", usuario: "Daniel Torres" },
 ];
@@ -31,7 +31,7 @@ api.get("/tareas", cors(corsOpt), (req, res) => {
 
 api.post("/tarea", cors(corsOpt), (req, res) => {
 tareas.push(req.body);
-res.sendStatus(200);
+res.json(req.body); 
 }); 
 
 app.use('/api', api);

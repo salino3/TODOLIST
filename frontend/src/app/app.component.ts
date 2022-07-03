@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { TareasComponent } from './tareas/tareas.component';
 //
 
@@ -8,9 +8,5 @@ import { TareasComponent } from './tareas/tareas.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @ViewChild(TareasComponent) tareas:any = TareasComponent;
 
-  nTarea(tarea: any) {
-    this.tareas.tareas.push(tarea);
-  }
 }

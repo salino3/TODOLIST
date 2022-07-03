@@ -1,7 +1,7 @@
 <p>Listado tareas: </p>
   <!-- <div  *ngFor="let tarea of tareas">Tarea: {{tarea.trabajo}}, Usuario: {{tarea.usuario}} </div> -->
 
-<mat-card *ngFor="let tarea of tareas" >  <mat-card-title>{{tarea.usuario}}</mat-card-title>
+<mat-card *ngFor="let tarea of webservice.tareas" >  <mat-card-title>{{tarea.usuario}}</mat-card-title>
   <mat-card-content>
     <p> {{tarea.trabajo}} </p>
   </mat-card-content></mat-card>

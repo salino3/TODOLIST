@@ -7,15 +7,24 @@ export class WebService {
 
   APIURL = 'http://localhost:7080/api';
 
-  constructor(private http: HttpClient) {}
+tareas: any;
+respuesta: any;
 
-  getTask() {
-    return this.http
+  constructor(private http: HttpClient) {
+    this.tareas = []; 
+    this.getTask();
+  }
+
+  // ruta backend
+  async getTask() {
+    this.respuesta =  await this.http
       .get(this.APIURL + '/tareas')
       .toPromise();
+      this.tareas = this.respuesta;
   }
-  postTask(_tarea: any) {
-    return this.http.post(this.APIURL + '/tarea', _tarea).toPromise();
+  async postTask(_tarea: any) {
+    this.respuesta = await this.http.post(this.APIURL + '/tarea', _tarea).toPromise();
+   this.tareas.push(this.respuesta);
   }
 }
 
