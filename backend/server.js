@@ -1,9 +1,12 @@
 // npm install cors
 // npm install -g nodemon
 // nodemon server.js -->  por levantar server
+// npm install --save body-parser --> para que entienda file JSON
+
 
 var express = require("express");
 var cors = require('cors');
+var bp = require('body-parser');
 
 var app = express();
 var corsOpt = {
@@ -17,10 +20,19 @@ var tareas = [
 ];
 //
 
-app.use(cors());
+app.use(bp.json());// parsea el body de las peticiones en 'json'
+//app.use(cors());
+var api = express.Router();
 
-app.get("/tareas", cors(corsOpt), (req, res) => {
+api.get("/tareas", cors(corsOpt), (req, res) => {
   res.json(tareas);
-});
+}); 
 
-app.listen(1234);
+api.post("/tarea", cors(corsOpt), (req, res) => {
+tareas.push(req.body);
+res.sendStatus(200);
+}); 
+
+app.use('/api', api);
+
+app.listen(7080);

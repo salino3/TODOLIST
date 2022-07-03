@@ -11,7 +11,7 @@ export class WebService{
     constructor(private http: HttpClient){}
 
  getTask(){
-    return this.http.get('http://localhost:1234/tareas').toPromise();
+    return this.http.get('http://localhost:7080/api/tareas').toPromise();
  }
 
 
