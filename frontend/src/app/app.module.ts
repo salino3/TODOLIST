@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 //
 import { TareasComponent } from './tareas/tareas.component';
@@ -26,6 +27,7 @@ import { NuevaTareaComponent } from './nueva-tarea/nueva-tarea.component';
     HttpClientModule,
     MatButtonModule,
     FormsModule,
+    MatSnackBarModule
   ],
   providers: [WebService],
   bootstrap: [AppComponent],
