@@ -21,8 +21,9 @@ var tareas = [
 //
 
 app.use(bp.json());// parsea el body de las peticiones en 'json'
-//app.use(cors());
 var api = express.Router();
+api.use(cors());// aplicar siempre politica de 'CORS'
+
 
 api.get("/tareas", cors(corsOpt), (req, res) => {
   res.json(tareas);

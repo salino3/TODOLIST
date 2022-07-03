@@ -1,0 +1,19 @@
+
+
+<mat-card>
+      <mat-card-title>Añadir tarea</mat-card-title>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre usuario:</mat-label>
+        <input [(ngModel)]="tarea.usuario" matInput placeholder="username..">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Tarea</mat-label>
+        <textarea [(ngModel)]="tarea.trabajo" matInput placeholder="Introduzca aquí su tarea.."></textarea>
+    </mat-form-field>
+    <button (click)="post()" type="submit" mat-raised-button color="primary">Enviar</button>
+
+
+</mat-card>
+
+
