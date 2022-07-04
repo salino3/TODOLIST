@@ -1,3 +1,9 @@
 
-<mat-toolbar color="primary">Todo List</mat-toolbar>
+<mat-toolbar color="primary">Todo List
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/"><img src="../../assets/outline_home_black_24dp.png" alt="Home" /></button>
+  <button mat-menu-item routerLink="/tareas"><img src="../../assets/outline_task_black_24dp.png" alt="Tasks" /></button>
+</mat-menu>
+</mat-toolbar>
 

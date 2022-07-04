@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 //
 import { TareasComponent } from './tareas/tareas.component';
@@ -38,6 +40,8 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     MatSnackBarModule,
     MatToolbarModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [WebService],
   bootstrap: [AppComponent],
