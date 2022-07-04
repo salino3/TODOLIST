@@ -10,14 +10,23 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 //
 import { TareasComponent } from './tareas/tareas.component';
 import { WebService} from './web.service';
 import { NuevaTareaComponent } from './nueva-tarea/nueva-tarea.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, TareasComponent, NuevaTareaComponent],
+  declarations: [
+    AppComponent,
+    TareasComponent,
+    NuevaTareaComponent,
+    NavComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,7 +36,8 @@ import { NuevaTareaComponent } from './nueva-tarea/nueva-tarea.component';
     HttpClientModule,
     MatButtonModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule,
   ],
   providers: [WebService],
   bootstrap: [AppComponent],
