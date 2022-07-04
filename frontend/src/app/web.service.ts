@@ -34,6 +34,7 @@ export class WebService {
         .post(this.APIURL + '/tarea', _tarea)
         .toPromise();
       this.tareas.push(this.respuesta);
+      this.tareasSujeto.next(this.tareas)
     } catch (error) {
       this.manejadorErrores('No se ha podido publicar tareas');
     }
